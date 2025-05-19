@@ -1,0 +1,157 @@
+Page Sections + 3D Scene Breakdown
+
+1. Hero Section
+
+Position: Entry point (Z = 0)
+
+Visual Elements:
+
+Clean 3D text: “Abhay Dev.”
+
+Tagline: “Social Media Manager | Web Developer | Content Creator”
+
+Simple floating 3D shapes (spheres, rings) with no glow
+
+Animations:
+
+Subtle 3D camera zoom forward on scroll
+
+Text scales out and fades as scroll begins
+
+Shapes slowly rotate in the background
+
+2. About Me
+
+Position: Z = -10
+
+Visual Elements:
+
+A large, simple 3D plane (like a floating card)
+
+Your image on one side (framed in square)
+
+Text block with name, role, and summary
+
+Animations:
+
+Camera tilts 10° while moving
+
+Elements fade + slide into view
+
+Hover animation (subtle lift)
+
+3. Services
+
+Position: Z = -20
+
+Visual Layout:
+
+Three 3D panels/cards arranged horizontally in 3D space
+
+Each contains a text + icon (flat icon, no neon)
+
+Services:
+
+Social Media Management
+
+Content Production (shoot, edit, post)
+
+Strategy + Web Development
+
+Animation:
+
+Scroll pans camera from left → right
+
+Each card slides into view with scale-in animation
+
+4. Projects
+
+Position: Z = -35
+
+Visual Layout:
+
+3D scene with project boards (like display panels)
+
+Each board has:
+
+Thumbnail image
+
+Title
+
+Short 1-line description
+
+A clickable icon for GitHub/demo
+
+Animation:
+
+Scroll moves camera horizontally again
+
+Each project panel enters view with smooth fade & upward slide
+
+On hover: slight card tilt or float
+
+5. Contact / Client Form
+
+Position: Z = -50
+
+Visual Layout:
+
+3D flat plane for the form
+
+Minimal fields: Name, Email, Requirement
+
+Submit button
+
+Animation:
+
+Camera zooms into center
+
+Form scales in and blurs background slightly
+
+After submit: "Thank You" text fades in with reset option
+
+6. Sticky Footer
+
+UI Element (Not in 3D Scene)
+
+Always visible at bottom of screen
+
+Includes:
+
+© Abhay Dev. Year
+
+LinkedIn | Instagram | GitHub (icons)
+
+Scroll-to-top arrow
+
+🎨 Color Palette (Minimal Dark)
+
+Element	Color Code
+Background	#121212 or #1a1a1a
+Primary Text	#F5F5F5
+Secondary Text	#BDBDBD
+Accent	#A5B4FC (soft blue) or #D4A373 (beige)
+Card Panels	#1e1e1e with #2a2a2a borders
+Form Fields	Transparent with bottom border
+
+📌 GSAP + ScrollTrigger Mapping
+
+Scroll Range	Scene Action
+0–10%	Hero text appears → subtle zoom
+10–25%	Camera shifts + About fades in
+25–40%	Horizontal slide to Services cards
+40–60%	Horizontal slide through Projects
+60–80%	Camera zooms into Contact
+80–100%	Form appears, footer shows up
+
+🧰 Technical Notes
+
+react-three-fiber for 3D canvas
+
+@react-three/drei for helpers (PerspectiveCamera, Html overlay, etc.)
+
+gsap/ScrollTrigger for camera motion + component fade-ins
+
+Clean fonts from Google Fonts (loaded locally or via link)
+
+Optional: Custom scroll bar with minimal styling (::-webkit-scrollbar)
